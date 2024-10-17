@@ -13,7 +13,7 @@
   --dropdown-btn-bg-color: #d3ccccdc; /* Cor de fundo do botão dropdown */
   --dropdown-btn-text-color: #f107d2; /* Cor do texto do botão dropdown */
   --dropdown-hover-bg-color: #eeb0d9; /* Verde claro ao passar o mouse no dropdown */
-  --dropdown-content-hover-bg: #da8ecd; /* Cor de fundo do conteúdo dropdown ao passar o mouse */
+  --dropdown-content-hover-bg: #daccd7; /* Cor de fundo do conteúdo dropdown ao passar o mouse */
   --dropdown-link-color: #000000; /* Cor dos links no dropdown */
   --gif-bg-color: #f5f5f5; /* Cor de fundo para GIFs */
   
@@ -33,38 +33,6 @@
 }
 
 body.dark-mode {
-  /* Tema Escuro */
-  --main-bg-color: #000000; /* Cor de fundo principal no modo escuro */
-  --main-text-color: #ffffff; /* Cor do texto principal no modo escuro */
-  --hover-bg-color: #333333; /* Cor de fundo ao passar o mouse no modo escuro */
-  --footer-bg-color: #2c3e50; /* Cor de fundo do rodapé no modo escuro */
-  --footer-text-color: #ffffff; /* Cor do texto do rodapé no modo escuro */
-  --footer-heading-color: #5c3310; /* Cor dos cabeçalhos do rodapé no modo escuro */
-  --footer-link-color: #ecf0f1; /* Cor dos links do rodapé no modo escuro */
-  --bg-color: #121212; /* Cor de fundo padrão no modo escuro */
-  --text-color: #ffffff; /* Cor do texto padrão no modo escuro */
-  --dropdown-bg-color: #333333; /* Cor de fundo do dropdown no modo escuro */
-  --dropdown-btn-bg-color: #ffffff; /* Cor de fundo do botão dropdown no modo escuro */
-  --dropdown-btn-text-color: #000000; /* Cor do texto do botão dropdown no modo escuro */
-  --dropdown-hover-bg-color: #555555; /* Cor de fundo do dropdown ao passar o mouse no modo escuro */
-  --dropdown-content-hover-bg: #444444; /* Cor de fundo do conteúdo dropdown ao passar o mouse */
-  --dropdown-link-color: #ffffff; /* Cor dos links no dropdown no modo escuro */
-  --gif-bg-color: #2a2a2a; /* Cor de fundo para GIFs no modo escuro */
-
-  /* Estilos para produtos no modo escuro */
-  --produto-bg-color: #444; /* Cor de fundo dos produtos no modo escuro */
-  --produto-text-color: #dddddd; /* Cor do texto dos produtos no modo escuro */
-  --produto-border-color: #666; /* Cor da borda dos produtos no modo escuro */
-  --produto-title-color: #ff2802; /* Cor do título dos produtos no modo escuro (vermelho sangue) */
-  --produto-botao-bg-color: #720505; /* Cor de fundo do botão dos produtos no modo escuro (vermelho escuro) */
-  --produto-botao-text-color: #ffffff; /* Cor do texto do botão dos produtos no modo escuro */
-  --produto-botao-hover-bg-color: #ff0000; /* Cor do botão dos produtos ao passar o mouse no modo escuro (vermelho claro) */
-  --produto-box-shadow: 0 0 15px rgba(253, 0, 0, 0.5); /* Sombra dos produtos no modo escuro (vermelho claro) */
-
-  /* Estilos para botões no modo escuro */
-  --button-background: #421c1c; /* Cor de fundo dos botões no modo escuro */
-  --button-hover: #272727; /* Cor dos botões ao passar o mouse no modo escuro */
-}body.dark-mode {
   /* Tema Escuro */
   --main-bg-color: #000000; /* Cor de fundo principal no modo escuro */
   --main-text-color: #ffffff; /* Cor do texto principal no modo escuro */
@@ -175,56 +143,82 @@ body.dark-mode {
   }
 
   
-  /* Estilo do Carrossel */
+ /* Estilo do Carrossel */
 .carousel-container {
   width: 100%;
   overflow: hidden;
-  margin: 5px auto;
+  margin: 20px auto;
   position: relative;
-  height: auto; /* Ajuste a altura automaticamente */
+  height: auto;
+  background: linear-gradient(135deg, #f3f4f6, #eaeaea); /* Fundo com gradiente suave */
+  border-radius: 15px; /* Borda arredondada do container */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 /* Centraliza o carrossel */
 .carousel {
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
 }
 
 /* Estiliza as imagens do carrossel */
 .carousel img {
-  width: 80%; /* Define a largura como 80% do slide para reduzir o tamanho */
-  height: auto; /* Ajuste automático da altura para manter a proporção */
-  object-fit: cover; /* Evita deformação da imagem */
-  border-radius: 10px;
-  margin: 0 auto; /* Centraliza as imagens */
-  transition: transform 0.3s ease; /* Suave efeito de transformação para o zoom */
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px; /* Mantém as bordas arredondadas */
+  margin: 0 auto;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease, border-radius 0.4s ease; /* Adiciona transição para a borda */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Zoom suave ao passar o mouse */
 .carousel img:hover {
-  transform: scale(1.1); /* Zoom de 10% ao passar o mouse */
+  transform: scale(1.15); /* Zoom ao passar o mouse */
+  border-radius: 15px; /* Garante que a borda permaneça arredondada durante o zoom */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra aumentada ao hover */
 }
-
 /* Estilos Customizados para o Slick Carousel */
 .slick-slide {
-  padding: 0 10px;
+  padding: 0 10px; /* Mais espaçamento entre slides */
 }
 
 /* Estiliza os botões de navegação (anterior e próximo) */
 .slick-prev, .slick-next {
-  font-size: 24px;
-  color: #333;
-  z-index: 1;
+  font-size: 30px; /* Tamanho maior para mais destaque */
+  color: #fff; /* Cor branca */
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+  padding: 10px;
+  border-radius: 50%; /* Forma circular */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.slick-prev:hover, .slick-next:hover {
+  background-color: rgba(0, 0, 0, 0.9); /* Cor mais intensa ao hover */
+  transform: scale(1.1); /* Leve zoom ao passar o mouse */
 }
 
 /* Posição do botão anterior */
 .slick-prev {
-  left: 10px;
+  left: 15px;
 }
 
 /* Posição do botão próximo */
 .slick-next {
-  right: 10px;
+  right: 15px;
+}
+
+/* Ajusta a opacidade e a visibilidade dos botões ao passar o mouse */
+.carousel-container:hover .slick-prev, 
+.carousel-container:hover .slick-next {
+  opacity: 1; /* Mostra os botões ao hover */
+}
+
+.carousel-container .slick-prev, 
+.carousel-container .slick-next {
+  opacity: 0; /* Botões escondidos por padrão */
+  visibility: visible; /* Assegura que os botões ainda existam para interação */
+  transition: opacity 0.4s ease;
 }
 
   
@@ -237,42 +231,48 @@ body.dark-mode {
     margin-top: 5px;
   }
   
-  /* Dropdown */
-  .dropdown {
-    position: relative;
+  .dropbtn {
+      background-color: var(--dropdown-btn-bg-color);
+      color: var(--dropdown-btn-text-color);
+      padding: 15px 20px; /* Espaçamento interno */
+      border: none; /* Sem borda */
+      border-radius: 5px; /* Bordas arredondadas */
+      font-size: 16px; /* Tamanho da fonte */
+      cursor: pointer; /* Muda o cursor para indicar que é clicável */
+      transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
   }
   
-  .dropbtn {
-    background-color: var(--dropdown-btn-bg-color);
-    color: var(--dropdown-btn-text-color);
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
+  .dropbtn:hover {
+      background-color: var(--dropdown-btn-text-color);
   }
   
   .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: var(--dropdown-bg-color);
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+      display: none; /* Esconde o conteúdo do dropdown */
+      position: absolute; /* Posição absoluta para o dropdown */
+      background-color: var(--dropdown-bg-color);
+      border-radius: 5px; /* Bordas arredondadas */
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1; /* Garante que o dropdown fique sobre outros elementos */
+      min-width: 160px; /* Largura mínima */
   }
   
   .dropdown-content a {
-    color: var(--dropdown-link-color);
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+      color: var(--dropdown-link-color);
+      padding: 12px 16px; /* Espaçamento interno dos links */
+      text-decoration: none; /* Remove sublinhado */
+      display: block; /* Exibe os links como blocos */
+      transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
   }
   
   .dropdown-content a:hover {
-    background-color: var(--dropdown-content-hover-bg);
+      background-color: var(--dropdown-content-hover-bg); 
+      
+      color: #d477d4; /* Cor do texto ao passar o mouse */
   }
   
+  /* Exibe o conteúdo do dropdown ao passar o mouse sobre o botão */
   .dropdown:hover .dropdown-content {
-    display: block;
+      display: block; /* Mostra o conteúdo do dropdown */
   }
   
   .dropdown:hover .dropbtn {
@@ -320,13 +320,14 @@ body.dark-mode {
   height: 200px; /* Altura fixa da imagem */
   object-fit: cover; /* Mantém a proporção da imagem */
   border-radius: 10px; /* Bordas arredondadas para a imagem */
-}
-.zoomed {
-  transform: scale(1.5); /* Aumenta o tamanho da imagem */
+  transition: transform 0.4s ease-in-out, z-index 0.2s ease; /* Transição suave */
+  cursor: pointer; /* Indica que a imagem pode ser clicada */
+  }
+.product-img.zoomed {
+  transform: scale(1.5); /* Efeito de zoom ao clicar */
   z-index: 10; /* Fica acima dos outros elementos */
   position: relative; /* Para que o z-index funcione */
 }
-
 .description {
   font-size: 16px; /* Tamanho da fonte da descrição */
   color: var(--produto-text-color); /* Usando a variável de cor do texto do produto */

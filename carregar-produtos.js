@@ -10,7 +10,7 @@ fetch('produtos.json')
             produtoDiv.className = 'container-modern'; // Altera para usar sua classe
             produtoDiv.innerHTML = `
                 <h2>${produto.nome}</h2>
-                <img src="${produto.imagemPequena}" alt="${produto.nome}" class="product-img"onclick="toggleZoom(this)">
+                <img src="${produto.imagemPequena}" alt="${produto.nome}" class="product-img zoomable" onclick="toggleZoom(this)">
                 <p class="description">${produto.descricao}</p>
                 <span class="price">${produto.preco}</span>
                 <button class="buy-button">Comprar Agora</button>
@@ -78,21 +78,34 @@ setTimeout(function() {
         });
     });
 
-  // Função para alternar o modo e salvar no localStorage
-  function toggleDarkMode() {
-    document.body.classList.toggle('dark-mode');
-    if (document.body.classList.contains('dark-mode')) {
+// Função para alternar o modo e salvar no localStorage
+function toggleDarkMode() {
+    const body = document.body;
+    const toggleBtn = document.getElementById('toggleModeBtn');
+
+    // Alternar a classe 'dark-mode'
+    body.classList.toggle('dark-mode');
+
+    // Verificar se o modo escuro está ativado e salvar no localStorage
+    if (body.classList.contains('dark-mode')) {
         localStorage.setItem('darkMode', 'enabled');
+        toggleBtn.innerHTML = '🌙'; // Alterar ícone para lua
     } else {
         localStorage.setItem('darkMode', 'disabled');
+        toggleBtn.innerHTML = '🌞'; // Alterar ícone para sol
     }
 }
 
-// Verificar se o modo escuro foi ativado anteriormente
+// Verificar se o modo escuro foi ativado anteriormente e ajustar o botão
 function checkDarkMode() {
     const darkMode = localStorage.getItem('darkMode');
+    const toggleBtn = document.getElementById('toggleModeBtn');
+
     if (darkMode === 'enabled') {
         document.body.classList.add('dark-mode');
+        toggleBtn.innerHTML = '🌙'; // Se modo escuro ativado, exibe lua
+    } else {
+        toggleBtn.innerHTML = '🌞'; // Se modo claro, exibe sol
     }
 }
 
