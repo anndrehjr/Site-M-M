@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel de Imagens com Zoom</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .carousel-container {
+            width: 80%;
+            max-width: 1000px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel-slide {
+            display: flex;
+            width: 100%;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-slide img:hover {
+            transform: scale(1.2); /* Efeito de zoom ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <img src="image.png" alt="Imagem 1">
+            <img src="image.png" alt="Imagem 1">
+            <img src="image.png" alt="Imagem 1">
+            <img src="image.png" alt="Imagem 1">
+            <img src="image.png" alt="Imagem 1">
+            <img src="image.png" alt="Imagem 1">
+            <img src="image.png" alt="Imagem 1">
+            <img src="image.png" alt="Imagem 1">
+            <img src="image.png" alt="Imagem 1">
+
+        </div>
+    </div>
+
+    <script>
+        const carouselSlide = document.querySelector('.carousel-slide');
+        const images = document.querySelectorAll('.carousel-slide img');
+
+        let counter = 0;
+        const size = images[0].clientWidth;
+
+        // Função para mover as imagens
+        function moveSlide() {
+            counter++;
+            if (counter >= images.length) {
+                counter = 0; // Reiniciar no final
+            }
+            carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+        }
+
+        // Mover o slide a cada 3 segundos
+        setInterval(moveSlide, 3000);
+    </script>
+
+</body>
+</html>

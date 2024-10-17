@@ -1,0 +1,557 @@
+:root {
+  /* Tema Claro */
+  --main-bg-color: #ffffff; /* Cor de fundo principal */
+  --main-text-color: #000000; /* Cor do texto principal */
+  --hover-bg-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
+  --footer-bg-color: #d4d3d3; /* Cor de fundo do rodapé */
+  --footer-text-color: #000000; /* Cor do texto do rodapé */
+  --footer-heading-color: #e67e22; /* Cor dos cabeçalhos do rodapé */
+  --footer-link-color: #000000; /* Cor dos links do rodapé */
+  --bg-color: #ffffff; /* Cor de fundo padrão */
+  --text-color: #000000; /* Cor do texto padrão */
+  --dropdown-bg-color: #f9f9f9; /* Cor de fundo do dropdown */
+  --dropdown-btn-bg-color: #d3ccccdc; /* Cor de fundo do botão dropdown */
+  --dropdown-btn-text-color: #f107d2; /* Cor do texto do botão dropdown */
+  --dropdown-hover-bg-color: #eeb0d9; /* Verde claro ao passar o mouse no dropdown */
+  --dropdown-content-hover-bg: #da8ecd; /* Cor de fundo do conteúdo dropdown ao passar o mouse */
+  --dropdown-link-color: #000000; /* Cor dos links no dropdown */
+  --gif-bg-color: #f5f5f5; /* Cor de fundo para GIFs */
+  
+  /* Estilos para produtos */
+  --produto-bg-color: #ffebee; /* Rosa claro como cor de fundo dos produtos */
+  --produto-text-color: #000000; /* Cor do texto dos produtos */
+  --produto-border-color: #b2dfdb; /* Verde claro como cor da borda dos produtos */
+  --produto-title-color: #041831; /* Cor do título dos produtos */
+  --produto-botao-bg-color: #cddbeb; /* Cor de fundo do botão dos produtos */
+  --produto-botao-text-color: #000000; /* Cor do texto dos botões dos produtos */
+  --produto-botao-hover-bg-color: #8bb9eb; /* Cor do botão dos produtos ao passar o mouse */
+  --produto-box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Sombra dos produtos */
+
+  /* Estilos para botões */
+  --button-background: #e4a7d7; /* Verde claro para a cor de fundo dos botões */
+  --button-hover: #f0daed; /* Verde escuro para os botões ao passar o mouse */
+}
+
+body.dark-mode {
+  /* Tema Escuro */
+  --main-bg-color: #000000; /* Cor de fundo principal no modo escuro */
+  --main-text-color: #ffffff; /* Cor do texto principal no modo escuro */
+  --hover-bg-color: #333333; /* Cor de fundo ao passar o mouse no modo escuro */
+  --footer-bg-color: #2c3e50; /* Cor de fundo do rodapé no modo escuro */
+  --footer-text-color: #ffffff; /* Cor do texto do rodapé no modo escuro */
+  --footer-heading-color: #5c3310; /* Cor dos cabeçalhos do rodapé no modo escuro */
+  --footer-link-color: #ecf0f1; /* Cor dos links do rodapé no modo escuro */
+  --bg-color: #121212; /* Cor de fundo padrão no modo escuro */
+  --text-color: #ffffff; /* Cor do texto padrão no modo escuro */
+  --dropdown-bg-color: #333333; /* Cor de fundo do dropdown no modo escuro */
+  --dropdown-btn-bg-color: #ffffff; /* Cor de fundo do botão dropdown no modo escuro */
+  --dropdown-btn-text-color: #000000; /* Cor do texto do botão dropdown no modo escuro */
+  --dropdown-hover-bg-color: #555555; /* Cor de fundo do dropdown ao passar o mouse no modo escuro */
+  --dropdown-content-hover-bg: #444444; /* Cor de fundo do conteúdo dropdown ao passar o mouse */
+  --dropdown-link-color: #ffffff; /* Cor dos links no dropdown no modo escuro */
+  --gif-bg-color: #2a2a2a; /* Cor de fundo para GIFs no modo escuro */
+
+  /* Estilos para produtos no modo escuro */
+  --produto-bg-color: #444; /* Cor de fundo dos produtos no modo escuro */
+  --produto-text-color: #dddddd; /* Cor do texto dos produtos no modo escuro */
+  --produto-border-color: #666; /* Cor da borda dos produtos no modo escuro */
+  --produto-title-color: #ff2802; /* Cor do título dos produtos no modo escuro (vermelho sangue) */
+  --produto-botao-bg-color: #720505; /* Cor de fundo do botão dos produtos no modo escuro (vermelho escuro) */
+  --produto-botao-text-color: #ffffff; /* Cor do texto do botão dos produtos no modo escuro */
+  --produto-botao-hover-bg-color: #ff0000; /* Cor do botão dos produtos ao passar o mouse no modo escuro (vermelho claro) */
+  --produto-box-shadow: 0 0 15px rgba(253, 0, 0, 0.5); /* Sombra dos produtos no modo escuro (vermelho claro) */
+
+  /* Estilos para botões no modo escuro */
+  --button-background: #421c1c; /* Cor de fundo dos botões no modo escuro */
+  --button-hover: #272727; /* Cor dos botões ao passar o mouse no modo escuro */
+}body.dark-mode {
+  /* Tema Escuro */
+  --main-bg-color: #000000; /* Cor de fundo principal no modo escuro */
+  --main-text-color: #ffffff; /* Cor do texto principal no modo escuro */
+  --hover-bg-color: #333333; /* Cor de fundo ao passar o mouse no modo escuro */
+  --footer-bg-color: #2c3e50; /* Cor de fundo do rodapé no modo escuro */
+  --footer-text-color: #ffffff; /* Cor do texto do rodapé no modo escuro */
+  --footer-heading-color: #5c3310; /* Cor dos cabeçalhos do rodapé no modo escuro */
+  --footer-link-color: #ecf0f1; /* Cor dos links do rodapé no modo escuro */
+  --bg-color: #121212; /* Cor de fundo padrão no modo escuro */
+  --text-color: #ffffff; /* Cor do texto padrão no modo escuro */
+  --dropdown-bg-color: #333333; /* Cor de fundo do dropdown no modo escuro */
+  --dropdown-btn-bg-color: #ffffff; /* Cor de fundo do botão dropdown no modo escuro */
+  --dropdown-btn-text-color: #000000; /* Cor do texto do botão dropdown no modo escuro */
+  --dropdown-hover-bg-color: #555555; /* Cor de fundo do dropdown ao passar o mouse no modo escuro */
+  --dropdown-content-hover-bg: #444444; /* Cor de fundo do conteúdo dropdown ao passar o mouse */
+  --dropdown-link-color: #ffffff; /* Cor dos links no dropdown no modo escuro */
+  --gif-bg-color: #2a2a2a; /* Cor de fundo para GIFs no modo escuro */
+
+  /* Estilos para produtos no modo escuro */
+  --produto-bg-color: #444; /* Cor de fundo dos produtos no modo escuro */
+  --produto-text-color: #dddddd; /* Cor do texto dos produtos no modo escuro */
+  --produto-border-color: #666; /* Cor da borda dos produtos no modo escuro */
+  --produto-title-color: #ff2802; /* Cor do título dos produtos no modo escuro (vermelho sangue) */
+  --produto-botao-bg-color: #720505; /* Cor de fundo do botão dos produtos no modo escuro (vermelho escuro) */
+  --produto-botao-text-color: #ffffff; /* Cor do texto do botão dos produtos no modo escuro */
+  --produto-botao-hover-bg-color: #ff0000; /* Cor do botão dos produtos ao passar o mouse no modo escuro (vermelho claro) */
+  --produto-box-shadow: 0 0 15px rgba(253, 0, 0, 0.5); /* Sombra dos produtos no modo escuro (vermelho claro) */
+
+  /* Estilos para botões no modo escuro */
+  --button-background: #421c1c; /* Cor de fundo dos botões no modo escuro */
+  --button-hover: #272727; /* Cor dos botões ao passar o mouse no modo escuro */
+}
+
+  /* Reset de Estilos */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Corpo */
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  /* Wrapper centralizado com largura fixa de 1280px */
+  
+  /* Cabeçalho de Navegação */
+  .nav-bar {
+    background-color: var(--main-bg-color);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    
+  }
+  
+  .logo {
+    height: 50px;
+  }
+  
+  nav {
+    background-color: var(--background-color);
+    padding: 10px 20px; /* Preenchimento da barra de navegação */
+    box-shadow: 0 2px 5px rgba(202, 29, 29, 0.1); /* Sombra para dar profundidade */
+  }
+  
+  .menu {
+    list-style-type: none; /* Remove marcadores da lista */
+    padding: 0; /* Remove o preenchimento padrão */
+    display: flex; /* Exibe os itens em linha */
+    gap: 15px; /* Espaçamento entre os botões */
+  }
+  
+  .menu-item {
+    margin: 0; /* Remove margens */
+  }
+  
+  .menu-item button {
+    background-color: var(--button-background); /* Cor de fundo do botão */
+    color: var(--text-color); /* Cor do texto */
+    border: none; /* Remove bordas */
+    padding: 10px 15px; /* Preenchimento interno */
+    border-radius: 5px; /* Cantos arredondados */
+    cursor: pointer; /* Muda o cursor para pointer */
+    display: flex; /* Para alinhar ícone e texto */
+    align-items: center; /* Alinha verticalmente */
+    font-size: 16px; /* Tamanho da fonte do botão */
+    transition: background-color 0.3s ease; /* Transição suave para mudança de cor */
+  }
+  
+  .menu-item button:hover {
+    background-color: var(--button-hover); /* Cor do botão ao passar o mouse */
+  }
+
+  
+  /* Estilo do Carrossel */
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  margin: 5px auto;
+  position: relative;
+  height: auto; /* Ajuste a altura automaticamente */
+}
+
+/* Centraliza o carrossel */
+.carousel {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Estiliza as imagens do carrossel */
+.carousel img {
+  width: 80%; /* Define a largura como 80% do slide para reduzir o tamanho */
+  height: auto; /* Ajuste automático da altura para manter a proporção */
+  object-fit: cover; /* Evita deformação da imagem */
+  border-radius: 10px;
+  margin: 0 auto; /* Centraliza as imagens */
+  transition: transform 0.3s ease; /* Suave efeito de transformação para o zoom */
+}
+
+/* Zoom suave ao passar o mouse */
+.carousel img:hover {
+  transform: scale(1.1); /* Zoom de 10% ao passar o mouse */
+}
+
+/* Estilos Customizados para o Slick Carousel */
+.slick-slide {
+  padding: 0 10px;
+}
+
+/* Estiliza os botões de navegação (anterior e próximo) */
+.slick-prev, .slick-next {
+  font-size: 24px;
+  color: #333;
+  z-index: 1;
+}
+
+/* Posição do botão anterior */
+.slick-prev {
+  left: 10px;
+}
+
+/* Posição do botão próximo */
+.slick-next {
+  right: 10px;
+}
+
+  
+  /* Dropdown e GIF */
+  .header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 5px;
+  }
+  
+  /* Dropdown */
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropbtn {
+    background-color: var(--dropdown-btn-bg-color);
+    color: var(--dropdown-btn-text-color);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--dropdown-bg-color);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: var(--dropdown-link-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: var(--dropdown-content-hover-bg);
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: var(--dropdown-hover-bg-color);
+  }
+  /* GIF */
+  .gif-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gif-bg-color);
+  }
+  
+  .gif {
+    width: 100%;
+    height: 50px;
+  }
+  
+/* Estilos dos produtos */
+.produtos {
+  display: flex; /* Exibir como flexbox */
+  flex-wrap: wrap; /* Permitir quebra de linha */
+  justify-content: center; /* Centralizar os produtos */
+  padding: 20px; /* Espaçamento ao redor da seção de produtos */
+}
+
+.container-modern {
+  max-width: 300px; /* Largura máxima do contêiner */
+  background-color: var(--produto-bg-color); /* Usando a variável de cor de fundo do produto */
+  border-radius: 15px; /* Bordas arredondadas */
+  box-shadow: var(--produto-box-shadow); /* Sombra usando a variável */
+  padding: 20px; /* Espaçamento interno */
+  text-align: center; /* Centraliza o texto */
+  transition: transform 0.3s ease; /* Transição suave para o efeito de hover */
+  margin: 20px; /* Margem ao redor do contêiner */
+}
+
+.container-modern:hover {
+  transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+}
+
+.product-img {
+  width: 100%; /* Largura da imagem */
+  height: 200px; /* Altura fixa da imagem */
+  object-fit: cover; /* Mantém a proporção da imagem */
+  border-radius: 10px; /* Bordas arredondadas para a imagem */
+}
+.zoomed {
+  transform: scale(1.5); /* Aumenta o tamanho da imagem */
+  z-index: 10; /* Fica acima dos outros elementos */
+  position: relative; /* Para que o z-index funcione */
+}
+
+.description {
+  font-size: 16px; /* Tamanho da fonte da descrição */
+  color: var(--produto-text-color); /* Usando a variável de cor do texto do produto */
+  margin: 10px 0; /* Margem vertical */
+}
+
+.price {
+  font-size: 24px; /* Tamanho da fonte do preço */
+  color: var(--produto-title-color); /* Usando a variável para a cor do título */
+  font-weight: bold; /* Negrito para o preço */
+}
+
+.buy-button {
+  background-color: var(--produto-botao-bg-color); /* Cor de fundo do botão dos produtos */
+  color: var(--produto-botao-text-color); /* Cor do texto do botão dos produtos */
+  border: none; /* Sem borda */
+  padding: 10px 20px; /* Espaçamento interno do botão */
+  border-radius: 5px; /* Bordas arredondadas do botão */
+  cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+  transition: background-color 0.3s ease; /* Transição suave para o fundo do botão */
+}
+
+.buy-button:hover {
+  background-color: var(--produto-botao-hover-bg-color); /* Cor do botão ao passar o mouse */
+}
+  
+  /* Estilo do Rodapé */
+  .footer {
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+    padding: 40px 0;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px;
+  }
+  
+  .footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--footer-heading-color);
+    display: inline-block;
+  }
+  
+  .footer-section p,
+  .footer-section ul,
+  .footer-section a {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  
+  .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul li a {
+    color: var(--footer-link-color);
+    text-decoration: none;
+  }
+  
+  .footer-section ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #e67e22;
+    text-decoration: underline;
+  }
+  
+  /* Estilo Ícones Sociais */
+  .social-icons {
+    margin-top: 20px;
+  }
+  
+  .social-icons a {
+    color: #fff;
+    margin-right: 15px;
+    font-size: 20px;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #e67e22;
+  }
+  
+  /* Estilo Contato */
+  .footer-section p i {
+    margin-right: 10px;
+    color: #e67e22;
+  }
+  
+  /* Copyright */
+  .footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background-color: #1a252f;
+    font-size: 14px;
+  }
+  
+  /* CSS para o Preloader */
+  .preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: spinz 1.0s linear infinite;
+    width: 100%;
+    height: 100%;
+    background-color: #000000; /* Cor de fundo do preloader */
+    z-index: 100;
+  }
+  
+  .loader {
+    border: 16px solid #efeee8; /* Cor do fundo do loader */
+    border-top: 16px solid #fd0000; /* Cor do preloader */
+    border-radius: 50%;
+    width: 50px; /* Aumentei o tamanho para melhor visibilidade */
+    height: 50px; /* Aumentei o tamanho para melhor visibilidade */
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Definindo a animação de rotação */
+  @keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+  /* Responsividade Geral */
+  @media (max-width: 1200px) {
+    /* Ajustes para telas médias, como tablets em paisagem */
+    .menu-item a {
+      padding: 8px 16px;
+    }
+  
+    .carousel img {
+      height: 400px; /* Ajusta altura para tablets */
+    }
+  
+    .produto {
+      max-width: 280px;
+    }
+  
+    .footer-container {
+      flex-direction: column; /* Empilha os elementos do rodapé */
+      align-items: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* Ajustes para telas menores, como tablets e celulares */
+    nav .menu {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .menu-item {
+      margin-bottom: 10px;
+    }
+  
+    .carousel img {
+      height: 250px; /* Ajusta altura das imagens do carrossel em celulares */
+    }
+  
+    .produtos {
+      flex-direction: column; /* Produtos em uma única coluna em telas menores */
+    }
+  
+    .produto {
+      width: 100%; /* Largura total em telas menores */
+      margin: 10px 0; /* Ajustar margens para melhor espaçamento */
+  }
+  
+    .footer-container {
+      flex-direction: column; /* Rodapé com elementos empilhados em telas menores */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Ajustes para celulares */
+    body {
+      font-size: 0.9rem; /* Diminui um pouco o tamanho da fonte em celulares */
+    }
+  
+    .menu-item a {
+      padding: 6px 12px; /* Menor espaçamento para links de menu em celulares */
+    }
+  
+    .carousel img {
+      height: 200px; /* Carrossel menor em celulares */
+    }
+  
+    .produto-botao {
+      padding: 8px 16px; /* Botões menores em celulares */
+    }
+  
+    .footer-section {
+      min-width: 100%; /* Elementos de rodapé ocupam toda a largura da tela */
+    }
+  }
+  
+  /* Ajustes adicionais para manter responsividade */
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .container-item {
+    flex: 1 1 300px;
+    margin: 10px;
+  }
+  
+
