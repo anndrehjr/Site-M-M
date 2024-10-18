@@ -407,7 +407,7 @@ body.dark-mode {
 #progress {
   height: 100%;
   width: 0;
-  background-color: #3498db; /* Cor da barra */
+  background-color: #ff0000; /* Cor da barra */
   animation: loading 3s forwards; /* Animação de preenchimento */
 }
 #pagination {
