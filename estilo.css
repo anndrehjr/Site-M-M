@@ -533,89 +533,68 @@ body.dark-mode {
     0% { transform: translate(-50%, -50%) rotate(0deg); }
     100% { transform: translate(-50%, -50%) rotate(360deg); }
   }
-  /* Responsividade Geral */
-  @media (max-width: 1200px) {
-    /* Ajustes para telas médias, como tablets em paisagem */
-    .menu-item a {
-      padding: 8px 16px;
-    }
-  
-    .carousel img {
-      height: 400px; /* Ajusta altura para tablets */
-    }
-  
-    .produto {
-      max-width: 280px;
-    }
-  
-    .footer-container {
-      flex-direction: column; /* Empilha os elementos do rodapé */
-      align-items: center;
-    }
+/* Responsividade Geral */
+@media (max-width: 1200px) {
+  /* Ajustes para telas médias, como tablets em paisagem */
+  .menu-item a {
+    padding: 8px 16px;
   }
-  
-  @media (max-width: 768px) {
-    /* Ajustes para telas menores, como tablets e celulares */
-    nav .menu {
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .menu-item {
-      margin-bottom: 10px;
-    }
-  
-    .carousel img {
-      height: 250px; /* Ajusta altura das imagens do carrossel em celulares */
-    }
-  
-    .produtos {
-      flex-direction: column; /* Produtos em uma única coluna em telas menores */
-    }
-  
-    .produto {
-      width: 100%; /* Largura total em telas menores */
-      margin: 10px 0; /* Ajustar margens para melhor espaçamento */
+
+  .carousel img {
+    height: 400px; /* Ajusta altura para tablets */
   }
-  
-    .footer-container {
-      flex-direction: column; /* Rodapé com elementos empilhados em telas menores */
-    }
+
+  .produto {
+    max-width: 280px; /* Largura máxima para telas médias */
   }
-  
-  @media (max-width: 480px) {
-    /* Ajustes para celulares */
-    body {
-      font-size: 0.9rem; /* Diminui um pouco o tamanho da fonte em celulares */
-    }
-  
-    .menu-item a {
-      padding: 6px 12px; /* Menor espaçamento para links de menu em celulares */
-    }
-  
-    .carousel img {
-      height: 200px; /* Carrossel menor em celulares */
-    }
-  
-    .produto-botao {
-      padding: 8px 16px; /* Botões menores em celulares */
-    }
-  
-    .footer-section {
-      min-width: 100%; /* Elementos de rodapé ocupam toda a largura da tela */
-    }
+
+  .footer-container {
+    flex-direction: column; /* Empilha os elementos do rodapé */
+    align-items: center;
   }
-  
-  /* Ajustes adicionais para manter responsividade */
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column; /* Alinha itens na vertical em telas menores */
   }
-  
-  .container-item {
-    flex: 1 1 300px;
-    margin: 10px;
+
+  .menu {
+    flex-direction: column; /* Alinha os itens do menu na vertical */
+    gap: 10px; /* Reduz o espaçamento entre os botões do menu */
   }
-  
+
+  .carousel img {
+    width: 100%; /* Ajusta a largura das imagens do carrossel */
+  }
+
+  .produto {
+    margin: 10px; /* Ajusta a margem dos produtos */
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-item button {
+    font-size: 14px; /* Reduz o tamanho da fonte dos botões em telas pequenas */
+    padding: 8px; /* Reduz o preenchimento dos botões em telas pequenas */
+  }
+
+  .produto h2 {
+    font-size: 18px; /* Ajusta o tamanho do título dos produtos em telas pequenas */
+  }
+}
+
+/* Ajustes adicionais para manter responsividade */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.container-item {
+  flex: 1 1 300px; /* Largura base para os itens */
+  margin: 10px;
+}
 
