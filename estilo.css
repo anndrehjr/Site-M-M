@@ -1,11 +1,12 @@
 :root {
   /* Tema Claro */
+  --nav-bg-color:#e9c2dc;
   --main-bg-color: #ffffff; /* Cor de fundo principal */
   --main-text-color: #000000; /* Cor do texto principal */
   --hover-bg-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
   --footer-bg-color: #d4d3d3; /* Cor de fundo do rodapé */
   --footer-text-color: #000000; /* Cor do texto do rodapé */
-  --footer-heading-color: #e67e22; /* Cor dos cabeçalhos do rodapé */
+  --footer-heading-color: #ff00c8; /* Cor dos cabeçalhos do rodapé */
   --footer-link-color: #000000; /* Cor dos links do rodapé */
   --bg-color: #ffffff; /* Cor de fundo padrão */
   --text-color: #000000; /* Cor do texto padrão */
@@ -34,12 +35,13 @@
 
 body.dark-mode {
   /* Tema Escuro */
+  --nav-bg-color:#000000;
   --main-bg-color: #000000; /* Cor de fundo principal no modo escuro */
   --main-text-color: #ffffff; /* Cor do texto principal no modo escuro */
   --hover-bg-color: #333333; /* Cor de fundo ao passar o mouse no modo escuro */
-  --footer-bg-color: #2c3e50; /* Cor de fundo do rodapé no modo escuro */
+  --footer-bg-color: #000000; /* Cor de fundo do rodapé no modo escuro */
   --footer-text-color: #ffffff; /* Cor do texto do rodapé no modo escuro */
-  --footer-heading-color: #5c3310; /* Cor dos cabeçalhos do rodapé no modo escuro */
+  --footer-heading-color: #ce0a0a; /* Cor dos cabeçalhos do rodapé no modo escuro */
   --footer-link-color: #ecf0f1; /* Cor dos links do rodapé no modo escuro */
   --bg-color: #121212; /* Cor de fundo padrão no modo escuro */
   --text-color: #ffffff; /* Cor do texto padrão no modo escuro */
@@ -49,10 +51,10 @@ body.dark-mode {
   --dropdown-hover-bg-color: #555555; /* Cor de fundo do dropdown ao passar o mouse no modo escuro */
   --dropdown-content-hover-bg: #444444; /* Cor de fundo do conteúdo dropdown ao passar o mouse */
   --dropdown-link-color: #ffffff; /* Cor dos links no dropdown no modo escuro */
-  --gif-bg-color: #2a2a2a; /* Cor de fundo para GIFs no modo escuro */
+  --gif-bg-color: #ce0a0a; /* Cor de fundo para GIFs no modo escuro */
 
   /* Estilos para produtos no modo escuro */
-  --produto-bg-color: #444; /* Cor de fundo dos produtos no modo escuro */
+  --produto-bg-color: #000000; /* Cor de fundo dos produtos no modo escuro */
   --produto-text-color: #dddddd; /* Cor do texto dos produtos no modo escuro */
   --produto-border-color: #666; /* Cor da borda dos produtos no modo escuro */
   --produto-title-color: #ff2802; /* Cor do título dos produtos no modo escuro (vermelho sangue) */
@@ -77,7 +79,7 @@ body.dark-mode {
   
   body {
     font-family: Arial, sans-serif;
-    background-color: var(--main-bg-color);
+    background: linear-gradient(to bottom right, #A8E6CF, #FF8C94);
     color: var(--main-text-color);
     display: flex;
     flex-direction: column;
@@ -87,7 +89,7 @@ body.dark-mode {
     transition: background-color 0.3s, color 0.3s;
   }
   body.dark-mode {
-    background-color: #121212;
+    background:linear-gradient(to bottom right, #FF5252, #000000);; /* Cor de fundo principal */
     color: #ffffff;
   }
   
@@ -95,7 +97,7 @@ body.dark-mode {
   
   /* Cabeçalho de Navegação */
   .nav-bar {
-    background-color: var(--main-bg-color);
+    background-color: var(--nav-bg-color);
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -150,7 +152,7 @@ body.dark-mode {
   margin: 20px auto;
   position: relative;
   height: auto;
-  background: linear-gradient(135deg, #f3f4f6, #eaeaea); /* Fundo com gradiente suave */
+  background: linear-gradient(to bottom right, #A8E6CF, #FF8C94);
   border-radius: 15px; /* Borda arredondada do container */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
@@ -353,7 +355,64 @@ body.dark-mode {
 .buy-button:hover {
   background-color: var(--produto-botao-hover-bg-color); /* Cor do botão ao passar o mouse */
 }
-  
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+.pagination {
+  display: flex;
+  justify-content: center; /* Centraliza os botões na página */
+  align-items: center; /* Alinha os itens verticalmente */
+  margin: 20px 0; /* Espaçamento vertical ao redor da barra de paginação */
+}
+
+.pagination button {
+  margin: 0 5px; /* Espaçamento entre os botões */
+  padding: 5px 10px; /* Espessura e largura do botão */
+  border: none; /* Remove a borda padrão */
+  border-radius: 5px; /* Arredondamento dos cantos */
+  background-color: transparent; /* Fundo transparente para um visual minimalista */
+  color: #3498db; /* Cor do texto do botão */
+  font-size: 20px; /* Tamanho da fonte */
+  cursor: pointer; /* Altera o cursor para indicar que o botão é clicável */
+  transition: color 0.3s ease; /* Adiciona transições suaves */
+}
+
+.pagination button:hover {
+  color: #2980b9; /* Cor ao passar o mouse */
+}
+#page-number {
+  margin: 0 10px; /* Espaçamento horizontal ao redor do número da página */
+  font-size: 18px; /* Tamanho da fonte do número da página */
+  color: #555; /* Cor do texto */
+}
+
+#page-number i {
+  margin-right: 5px; /* Espaçamento entre o ícone e o texto */
+  color: #3498db; /* Cor do ícone */
+}
+
+
+ #progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #e0e0e0; /* Cor de fundo da barra */
+  position: fixed; /* Fixa a barra no topo da tela */
+  top: 0; /* Posiciona no topo */
+  left: 0; /* Alinha à esquerda */
+  z-index: 1000; /* Garante que a barra fique acima do conteúdo */
+  display: none; /* Inicialmente oculta */
+}
+
+#progress {
+  height: 100%;
+  width: 0;
+  background-color: #3498db; /* Cor da barra */
+  animation: loading 3s forwards; /* Animação de preenchimento */
+}
+#pagination {
+  margin-top: 20px;
+}
   /* Estilo do Rodapé */
   .footer {
     background-color: var(--footer-bg-color);
@@ -406,7 +465,7 @@ body.dark-mode {
   }
   
   .footer-section ul li a:hover {
-    color: #e67e22;
+    color: #ff0000;
     text-decoration: underline;
   }
   
@@ -423,13 +482,13 @@ body.dark-mode {
   }
   
   .social-icons a:hover {
-    color: #e67e22;
+    color: #ff0000;
   }
   
   /* Estilo Contato */
   .footer-section p i {
     margin-right: 10px;
-    color: #e67e22;
+    color: #ff0000;
   }
   
   /* Copyright */
@@ -466,6 +525,10 @@ body.dark-mode {
   }
   
   /* Definindo a animação de rotação */
+  @keyframes loading {
+    from { width: 0; }
+    to { width: 100%; }
+}
   @keyframes spin {
     0% { transform: translate(-50%, -50%) rotate(0deg); }
     100% { transform: translate(-50%, -50%) rotate(360deg); }
