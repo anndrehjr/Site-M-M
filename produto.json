@@ -1,0 +1,87 @@
+[
+    {
+        "nome": "Caneca Personalizada",
+        "imagemPequena": "image.png",
+        "descricao": "Caneca com design exclusivo e personalizado.",
+        "preco": "R$ 49,99",
+        "tipo": "Personalizados"
+    },
+    {
+        "nome": "Smartphone XYZ",
+        "imagemPequena": "image.png",
+        "descricao": "Smartphone com câmera de alta resolução e grande capacidade de bateria.",
+        "preco": "R$ 1299,99",
+        "tipo": "Eletrônicos"
+    },
+    {
+        "nome": "Película de Vidro Temperado",
+        "imagemPequena": "image.png",
+        "descricao": "Película de vidro temperado para proteção de tela.",
+        "preco": "R$ 29,99",
+        "tipo": "Películas"
+    },
+    {
+        "nome": "Carregador Portátil",
+        "imagemPequena": "image.png",
+        "descricao": "Carregador portátil com capacidade para carregar dois dispositivos ao mesmo tempo.",
+        "preco": "R$ 89,99",
+        "tipo": "Acessórios"
+    },
+    {
+        "nome": "Caneca Personalizada",
+        "imagemPequena": "image.png",
+        "descricao": "Caneca com design exclusivo e personalizado.",
+        "preco": "R$ 49,99",
+        "tipo": "Personalizados"
+    },
+    {
+        "nome": "Smartphone XYZ",
+        "imagemPequena": "image.png",
+        "descricao": "Smartphone com câmera de alta resolução e grande capacidade de bateria.",
+        "preco": "R$ 1299,99",
+        "tipo": "Eletrônicos"
+    },
+    {
+        "nome": "Película de Vidro Temperado",
+        "imagemPequena": "image.png",
+        "descricao": "Película de vidro temperado para proteção de tela.",
+        "preco": "R$ 29,99",
+        "tipo": "Películas"
+    },
+    {
+        "nome": "Carregador Portátil",
+        "imagemPequena": "image.png",
+        "descricao": "Carregador portátil com capacidade para carregar dois dispositivos ao mesmo tempo.",
+        "preco": "R$ 89,99",
+        "tipo": "Acessórios"
+    },
+    {
+        "nome": "Película de Vidro Temperado",
+        "imagemPequena": "image.png",
+        "descricao": "Película de vidro temperado para proteção de tela.",
+        "preco": "R$ 29,99",
+        "tipo": "Películas"
+    },
+    {
+        "nome": "Smartphone XYZ",
+        "imagemPequena": "image.png",
+        "descricao": "Smartphone com câmera de alta resolução e grande capacidade de bateria.",
+        "preco": "R$ 1299,99",
+        "tipo": "Eletrônicos"
+    },
+    {
+        "nome": "Caneca Personalizada",
+        "imagemPequena": "image.png",
+        "descricao": "Caneca com design exclusivo e personalizado.",
+        "preco": "R$ 49,99",
+        "tipo": "Personalizados"
+    },
+    {
+        "nome": "Smartphone XYZ",
+        "imagemPequena": "image.png",
+        "descricao": "Smartphone com câmera de alta resolução e grande capacidade de bateria.",
+        "preco": "R$ 1299,99",
+        "tipo": "Eletrônicos"
+    }
+    
+]

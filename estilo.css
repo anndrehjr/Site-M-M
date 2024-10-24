@@ -1,600 +1,280 @@
 :root {
-  /* Tema Claro */
-  --nav-bg-color:#e9c2dc;
-  --main-bg-color: #ffffff; /* Cor de fundo principal */
-  --main-text-color: #000000; /* Cor do texto principal */
-  --hover-bg-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
-  --footer-bg-color: #d4d3d3; /* Cor de fundo do rodapé */
-  --footer-text-color: #000000; /* Cor do texto do rodapé */
-  --footer-heading-color: #ff00c8; /* Cor dos cabeçalhos do rodapé */
-  --footer-link-color: #000000; /* Cor dos links do rodapé */
-  --bg-color: #ffffff; /* Cor de fundo padrão */
-  --text-color: #000000; /* Cor do texto padrão */
-  --dropdown-bg-color: #f9f9f9; /* Cor de fundo do dropdown */
-  --dropdown-btn-bg-color: #d3ccccdc; /* Cor de fundo do botão dropdown */
-  --dropdown-btn-text-color: #f107d2; /* Cor do texto do botão dropdown */
-  --dropdown-hover-bg-color: #eeb0d9; /* Verde claro ao passar o mouse no dropdown */
-  --dropdown-content-hover-bg: #daccd7; /* Cor de fundo do conteúdo dropdown ao passar o mouse */
-  --dropdown-link-color: #000000; /* Cor dos links no dropdown */
-  --gif-bg-color: #f5f5f5; /* Cor de fundo para GIFs */
-  
-  /* Estilos para produtos */
-  --produto-bg-color: #ffebee; /* Rosa claro como cor de fundo dos produtos */
-  --produto-text-color: #000000; /* Cor do texto dos produtos */
-  --produto-border-color: #b2dfdb; /* Verde claro como cor da borda dos produtos */
-  --produto-title-color: #041831; /* Cor do título dos produtos */
-  --produto-botao-bg-color: #cddbeb; /* Cor de fundo do botão dos produtos */
-  --produto-botao-text-color: #000000; /* Cor do texto dos botões dos produtos */
-  --produto-botao-hover-bg-color: #8bb9eb; /* Cor do botão dos produtos ao passar o mouse */
-  --produto-box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Sombra dos produtos */
+  --nav-bg-color: #e9c2dc;
+  --main-bg-color: #ffffff;
+  --main-text-color: #000000;
+  --hover-bg-color: #f0f0f0;
+  --footer-bg-color: #d4d3d3;
+  --footer-text-color: #000000;
+  --footer-heading-color: #ff00c8;
+  --footer-link-color: #000000;
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --dropdown-bg-color: #f9f9f9;
+  --dropdown-btn-bg-color: #d3ccccdc;
+  --dropdown-btn-text-color: #f107d2;
+  --dropdown-hover-bg-color: #eeb0d9;
+  --dropdown-content-hover-bg: #daccd7;
+  --dropdown-link-color: #000000;
+  --gif-bg-color: #f5f5f5;
+  --produto-bg-color: #ffebee;
+  --produto-text-color: #000000;
+  --produto-border-color: #b2dfdb;
+  --produto-title-color: #041831;
+  --produto-botao-bg-color: #cddbeb;
+  --produto-botao-text-color: #000000;
+  --produto-botao-hover-bg-color: #8bb9eb;
+  --produto-box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  --button-background: #e4a7d7;
+  --button-hover: #f0daed;
+}
 
-  /* Estilos para botões */
-  --button-background: #e4a7d7; /* Verde claro para a cor de fundo dos botões */
-  --button-hover: #f0daed; /* Verde escuro para os botões ao passar o mouse */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom right, #A8E6CF, #FF8C94);
+  color: var(--main-text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 body.dark-mode {
-  /* Tema Escuro */
-  --nav-bg-color:#000000;
-  --main-bg-color: #000000; /* Cor de fundo principal no modo escuro */
-  --main-text-color: #ffffff; /* Cor do texto principal no modo escuro */
-  --hover-bg-color: #333333; /* Cor de fundo ao passar o mouse no modo escuro */
-  --footer-bg-color: #000000; /* Cor de fundo do rodapé no modo escuro */
-  --footer-text-color: #ffffff; /* Cor do texto do rodapé no modo escuro */
-  --footer-heading-color: #ce0a0a; /* Cor dos cabeçalhos do rodapé no modo escuro */
-  --footer-link-color: #ecf0f1; /* Cor dos links do rodapé no modo escuro */
-  --bg-color: #121212; /* Cor de fundo padrão no modo escuro */
-  --text-color: #ffffff; /* Cor do texto padrão no modo escuro */
-  --dropdown-bg-color: #333333; /* Cor de fundo do dropdown no modo escuro */
-  --dropdown-btn-bg-color: #ffffff; /* Cor de fundo do botão dropdown no modo escuro */
-  --dropdown-btn-text-color: #000000; /* Cor do texto do botão dropdown no modo escuro */
-  --dropdown-hover-bg-color: #555555; /* Cor de fundo do dropdown ao passar o mouse no modo escuro */
-  --dropdown-content-hover-bg: #444444; /* Cor de fundo do conteúdo dropdown ao passar o mouse */
-  --dropdown-link-color: #ffffff; /* Cor dos links no dropdown no modo escuro */
-  --gif-bg-color: #ce0a0a; /* Cor de fundo para GIFs no modo escuro */
-
-  /* Estilos para produtos no modo escuro */
-  --produto-bg-color: #000000; /* Cor de fundo dos produtos no modo escuro */
-  --produto-text-color: #dddddd; /* Cor do texto dos produtos no modo escuro */
-  --produto-border-color: #666; /* Cor da borda dos produtos no modo escuro */
-  --produto-title-color: #ff2802; /* Cor do título dos produtos no modo escuro (vermelho sangue) */
-  --produto-botao-bg-color: #720505; /* Cor de fundo do botão dos produtos no modo escuro (vermelho escuro) */
-  --produto-botao-text-color: #ffffff; /* Cor do texto do botão dos produtos no modo escuro */
-  --produto-botao-hover-bg-color: #ff0000; /* Cor do botão dos produtos ao passar o mouse no modo escuro (vermelho claro) */
-  --produto-box-shadow: 0 0 15px rgba(253, 0, 0, 0.5); /* Sombra dos produtos no modo escuro (vermelho claro) */
-
-  /* Estilos para botões no modo escuro */
-  --button-background: #421c1c; /* Cor de fundo dos botões no modo escuro */
-  --button-hover: #272727; /* Cor dos botões ao passar o mouse no modo escuro */
+  background: linear-gradient(to bottom right, #FF5252, #000000);
+  color: #ffffff;
 }
 
-  /* Reset de Estilos */
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Corpo */
-  
-  body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom right, #A8E6CF, #FF8C94);
-    color: var(--main-text-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 100vh;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  body.dark-mode {
-    background:linear-gradient(to bottom right, #FF5252, #000000);; /* Cor de fundo principal */
-    color: #ffffff;
-  }
-  
-  /* Wrapper centralizado com largura fixa de 1280px */
-  
-  /* Cabeçalho de Navegação */
-  .nav-bar {
-    background-color: var(--nav-bg-color);
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    
-  }
-  
-  .logo {
-    height: 50px;
-  }
-  
-  nav {
-    background-color: var(--background-color);
-    padding: 10px 20px; /* Preenchimento da barra de navegação */
-    box-shadow: 0 2px 5px rgba(202, 29, 29, 0.1); /* Sombra para dar profundidade */
-  }
-  
-  .menu {
-    list-style-type: none; /* Remove marcadores da lista */
-    padding: 0; /* Remove o preenchimento padrão */
-    display: flex; /* Exibe os itens em linha */
-    gap: 15px; /* Espaçamento entre os botões */
-  }
-  
-  .menu-item {
-    margin: 0; /* Remove margens */
-  }
-  
-  .menu-item button {
-    background-color: var(--button-background); /* Cor de fundo do botão */
-    color: var(--text-color); /* Cor do texto */
-    border: none; /* Remove bordas */
-    padding: 10px 15px; /* Preenchimento interno */
-    border-radius: 5px; /* Cantos arredondados */
-    cursor: pointer; /* Muda o cursor para pointer */
-    display: flex; /* Para alinhar ícone e texto */
-    align-items: center; /* Alinha verticalmente */
-    font-size: 16px; /* Tamanho da fonte do botão */
-    transition: background-color 0.3s ease; /* Transição suave para mudança de cor */
-  }
-  
-  .menu-item button:hover {
-    background-color: var(--button-hover); /* Cor do botão ao passar o mouse */
-  }
-
-  
- /* Estilo do Carrossel */
-.carousel-container {
+.nav-bar {
+  background-color: var(--nav-bg-color);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  overflow: hidden;
-  margin: 20px auto;
-  position: relative;
-  height: auto;
-  background: linear-gradient(to bottom right, #A8E6CF, #FF8C94);
-  border-radius: 15px; /* Borda arredondada do container */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
-/* Centraliza o carrossel */
-.carousel {
-  width: 90%;
-  margin: 0 auto;
+.logo {
+  height: 50px;
 }
 
-/* Estiliza as imagens do carrossel */
-.carousel img {
-  width: 90%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 15px; /* Mantém as bordas arredondadas */
-  margin: 0 auto;
-  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease, border-radius 0.4s ease; /* Adiciona transição para a borda */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+nav {
+  background-color: var(--background-color);
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(202, 29, 29, 0.1);
 }
 
-/* Zoom suave ao passar o mouse */
-.carousel img:hover {
-  transform: scale(1.15); /* Zoom ao passar o mouse */
-  border-radius: 15px; /* Garante que a borda permaneça arredondada durante o zoom */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra aumentada ao hover */
-}
-/* Estilos Customizados para o Slick Carousel */
-.slick-slide {
-  padding: 0 10px; /* Mais espaçamento entre slides */
+.menu {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
 }
 
-/* Estiliza os botões de navegação (anterior e próximo) */
-.slick-prev, .slick-next {
-  font-size: 30px; /* Tamanho maior para mais destaque */
-  color: #fff; /* Cor branca */
-  background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
-  padding: 10px;
-  border-radius: 50%; /* Forma circular */
-  transition: background-color 0.3s ease, transform 0.3s ease;
+.menu-item {
+  margin: 0;
 }
 
-.slick-prev:hover, .slick-next:hover {
-  background-color: rgba(0, 0, 0, 0.9); /* Cor mais intensa ao hover */
-  transform: scale(1.1); /* Leve zoom ao passar o mouse */
+.menu-item button {
+  background-color: var(--button-background);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
-/* Posição do botão anterior */
-.slick-prev {
-  left: 15px;
+.menu-item button:hover {
+  background-color: var(--button-hover);
 }
 
-/* Posição do botão próximo */
-.slick-next {
-  right: 15px;
+main.corpo {
+  display: flex;
+  margin: 40px;
+  gap: 40px;
 }
 
-/* Ajusta a opacidade e a visibilidade dos botões ao passar o mouse */
-.carousel-container:hover .slick-prev, 
-.carousel-container:hover .slick-next {
-  opacity: 1; /* Mostra os botões ao hover */
-}
-
-.carousel-container .slick-prev, 
-.carousel-container .slick-next {
-  opacity: 0; /* Botões escondidos por padrão */
-  visibility: visible; /* Assegura que os botões ainda existam para interação */
-  transition: opacity 0.4s ease;
-}
-
-  
-  /* Dropdown e GIF */
-  .header-actions {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 5px;
-  }
-  
-  .dropbtn {
-      background-color: var(--dropdown-btn-bg-color);
-      color: var(--dropdown-btn-text-color);
-      padding: 15px 20px; /* Espaçamento interno */
-      border: none; /* Sem borda */
-      border-radius: 5px; /* Bordas arredondadas */
-      font-size: 16px; /* Tamanho da fonte */
-      cursor: pointer; /* Muda o cursor para indicar que é clicável */
-      transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
-  }
-  
-  .dropbtn:hover {
-      background-color: var(--dropdown-btn-text-color);
-  }
-  
-  .dropdown-content {
-      display: none; /* Esconde o conteúdo do dropdown */
-      position: absolute; /* Posição absoluta para o dropdown */
-      background-color: var(--dropdown-bg-color);
-      border-radius: 5px; /* Bordas arredondadas */
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      z-index: 1; /* Garante que o dropdown fique sobre outros elementos */
-      min-width: 160px; /* Largura mínima */
-  }
-  
-  .dropdown-content a {
-      color: var(--dropdown-link-color);
-      padding: 12px 16px; /* Espaçamento interno dos links */
-      text-decoration: none; /* Remove sublinhado */
-      display: block; /* Exibe os links como blocos */
-      transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
-  }
-  
-  .dropdown-content a:hover {
-      background-color: var(--dropdown-content-hover-bg); 
-      
-      color: #d477d4; /* Cor do texto ao passar o mouse */
-  }
-  
-  /* Exibe o conteúdo do dropdown ao passar o mouse sobre o botão */
-  .dropdown:hover .dropdown-content {
-      display: block; /* Mostra o conteúdo do dropdown */
-  }
-  
-  .dropdown:hover .dropbtn {
-    background-color: var(--dropdown-hover-bg-color);
-  }
-  /* GIF */
-  .gif-container {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--gif-bg-color);
-  }
-  
-  .gif {
-    width: 100%;
-    height: 50px;
-  }
-  
-/* Estilos dos produtos */
 .produtos {
-  display: flex; /* Exibir como flexbox */
-  flex-wrap: wrap; /* Permitir quebra de linha */
-  justify-content: center; /* Centralizar os produtos */
-  padding: 20px; /* Espaçamento ao redor da seção de produtos */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  flex: 1;
 }
 
 .container-modern {
-  max-width: 300px; /* Largura máxima do contêiner */
-  background-color: var(--produto-bg-color); /* Usando a variável de cor de fundo do produto */
-  border-radius: 15px; /* Bordas arredondadas */
-  box-shadow: var(--produto-box-shadow); /* Sombra usando a variável */
-  padding: 20px; /* Espaçamento interno */
-  text-align: center; /* Centraliza o texto */
-  transition: transform 0.3s ease; /* Transição suave para o efeito de hover */
-  margin: 20px; /* Margem ao redor do contêiner */
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .container-modern:hover {
-  transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .product-img {
-  width: 100%; /* Largura da imagem */
-  height: 200px; /* Altura fixa da imagem */
-  object-fit: cover; /* Mantém a proporção da imagem */
-  border-radius: 10px; /* Bordas arredondadas para a imagem */
-  transition: transform 0.4s ease-in-out, z-index 0.2s ease; /* Transição suave */
-  cursor: pointer; /* Indica que a imagem pode ser clicada */
-  }
-.product-img.zoomed {
-  transform: scale(1.5); /* Efeito de zoom ao clicar */
-  z-index: 10; /* Fica acima dos outros elementos */
-  position: relative; /* Para que o z-index funcione */
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
+
+.product-img.zoomed {
+  transform: scale(1.5);
+  z-index: 10;
+  position: relative;
+}
+
 .description {
-  font-size: 16px; /* Tamanho da fonte da descrição */
-  color: var(--produto-text-color); /* Usando a variável de cor do texto do produto */
-  margin: 10px 0; /* Margem vertical */
+  font-size: 16px;
+  color: var(--produto-text-color);
+  margin: 10px 0;
 }
 
 .price {
-  font-size: 24px; /* Tamanho da fonte do preço */
-  color: var(--produto-title-color); /* Usando a variável para a cor do título */
-  font-weight: bold; /* Negrito para o preço */
+  font-size: 24px;
+  color: var(--produto-title-color);
+  font-weight: bold;
 }
 
 .buy-button {
-  background-color: var(--produto-botao-bg-color); /* Cor de fundo do botão dos produtos */
-  color: var(--produto-botao-text-color); /* Cor do texto do botão dos produtos */
-  border: none; /* Sem borda */
-  padding: 10px 20px; /* Espaçamento interno do botão */
-  border-radius: 5px; /* Bordas arredondadas do botão */
-  cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
-  transition: background-color 0.3s ease; /* Transição suave para o fundo do botão */
+  background-color: var(--produto-botao-bg-color);
+  color: var(--produto-botao-text-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .buy-button:hover {
-  background-color: var(--produto-botao-hover-bg-color); /* Cor do botão ao passar o mouse */
+  background-color: var(--produto-botao-hover-bg-color);
 }
-.pagination {
-  margin-top: 20px;
-  text-align: center;
+
+aside.filtro {
+  padding: 20px;
+  background-color: #f9fafb;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease;
+  width: 300px;
 }
+
+aside.filtro h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #333;
+  font-weight: 500;
+}
+
+aside.filtro label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+aside.filtro select,
+aside.filtro button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  transition: border-color 0.3s ease;
+}
+
+aside.filtro select:focus,
+aside.filtro button:focus {
+  border-color: #4CAF50;
+}
+
 .pagination {
   display: flex;
-  justify-content: center; /* Centraliza os botões na página */
-  align-items: center; /* Alinha os itens verticalmente */
-  margin: 20px 0; /* Espaçamento vertical ao redor da barra de paginação */
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
 }
 
 .pagination button {
-  margin: 0 5px; /* Espaçamento entre os botões */
-  padding: 5px 10px; /* Espessura e largura do botão */
-  border: none; /* Remove a borda padrão */
-  border-radius: 5px; /* Arredondamento dos cantos */
-  background-color: transparent; /* Fundo transparente para um visual minimalista */
-  color: #3498db; /* Cor do texto do botão */
-  font-size: 20px; /* Tamanho da fonte */
-  cursor: pointer; /* Altera o cursor para indicar que o botão é clicável */
-  transition: color 0.3s ease; /* Adiciona transições suaves */
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .pagination button:hover {
-  color: #2980b9; /* Cor ao passar o mouse */
-}
-#page-number {
-  margin: 0 10px; /* Espaçamento horizontal ao redor do número da página */
-  font-size: 18px; /* Tamanho da fonte do número da página */
-  color: #555; /* Cor do texto */
+  background-color: #eee;
 }
 
-#page-number i {
-  margin-right: 5px; /* Espaçamento entre o ícone e o texto */
-  color: #e100ff; /* Cor do ícone */
-}
-
-
- #progress-bar {
+footer {
+  background-color: var(--footer-bg-color);
+  color: var(--footer-text-color);
+  padding: 20px;
+  text-align: center;
   width: 100%;
-  height: 10px;
-  background-color: #e0e0e0; /* Cor de fundo da barra */
-  position: fixed; /* Fixa a barra no topo da tela */
-  top: 0; /* Posiciona no topo */
-  left: 0; /* Alinha à esquerda */
-  z-index: 1000; /* Garante que a barra fique acima do conteúdo */
-  display: none; /* Inicialmente oculta */
+  position: relative;
+  bottom: 0;
 }
 
-#progress {
-  height: 100%;
-  width: 0;
-  background-color: #ff0000; /* Cor da barra */
-  animation: loading 3s forwards; /* Animação de preenchimento */
+footer h2 {
+  color: var(--footer-heading-color);
+  margin-bottom: 10px;
 }
-#pagination {
-  margin-top: 20px;
+
+footer p {
+  margin: 5px 0;
 }
-  /* Estilo do Rodapé */
-  .footer {
-    background-color: var(--footer-bg-color);
-    color: var(--footer-text-color);
-    padding: 40px 0;
-  }
-  
-  .footer-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  
-  .footer-section {
-    flex: 1;
-    min-width: 250px;
-    margin: 20px;
-  }
-  
-  .footer-section h3 {
-    font-size: 18px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid var(--footer-heading-color);
-    display: inline-block;
-  }
-  
-  .footer-section p,
-  .footer-section ul,
-  .footer-section a {
-    font-size: 14px;
-    line-height: 1.8;
-  }
-  
-  .footer-section ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .footer-section ul li {
-    margin-bottom: 10px;
-  }
-  
-  .footer-section ul li a {
-    color: var(--footer-link-color);
-    text-decoration: none;
-  }
-  
-  .footer-section ul li a:hover {
-    text-decoration: underline;
-  }
-  
-  .footer-section ul li a:hover {
-    color: #ff0000;
-    text-decoration: underline;
-  }
-  
-  /* Estilo Ícones Sociais */
-  .social-icons {
-    margin-top: 20px;
-  }
-  
-  .social-icons a {
-    color: #fff;
-    margin-right: 15px;
-    font-size: 20px;
-    transition: color 0.3s;
-  }
-  
-  .social-icons a:hover {
-    color: #ff0000;
-  }
-  
-  /* Estilo Contato */
-  .footer-section p i {
-    margin-right: 10px;
-    color: #ff0000;
-  }
-  
-  /* Copyright */
-  .footer-bottom {
-    text-align: center;
-    padding: 10px;
-    background-color: #1a252f;
-    font-size: 14px;
-  }
-  
-  /* CSS para o Preloader */
-  .preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    animation: spinz 1.0s linear infinite;
-    width: 100%;
-    height: 100%;
-    background-color: #000000; /* Cor de fundo do preloader */
-    z-index: 100;
-  }
-  
-  .loader {
-    border: 16px solid #efeee8; /* Cor do fundo do loader */
-    border-top: 16px solid #fd0000; /* Cor do preloader */
-    border-radius: 50%;
-    width: 50px; /* Aumentei o tamanho para melhor visibilidade */
-    height: 50px; /* Aumentei o tamanho para melhor visibilidade */
-    animation: spin 1s linear infinite;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  /* Definindo a animação de rotação */
-  @keyframes loading {
-    from { width: 0; }
-    to { width: 100%; }
+
+footer a {
+  color: var(--footer-link-color);
+  text-decoration: none;
 }
-  @keyframes spin {
-    0% { transform: translate(-50%, -50%) rotate(0deg); }
-    100% { transform: translate(-50%, -50%) rotate(360deg); }
-  }
-/* Responsividade Geral */
-@media (max-width: 1200px) {
-  /* Ajustes para telas médias, como tablets em paisagem */
-  .menu-item a {
-    padding: 8px 16px;
-  }
 
-  .carousel img {
-    height: 400px; /* Ajusta altura para tablets */
-  }
+footer a:hover {
+  text-decoration: underline;
+}
 
-  .produto {
-    max-width: 280px; /* Largura máxima para telas médias */
-  }
+body.dark-mode {
+  background: linear-gradient(to bottom right, #000000, #4B0082);
+}
 
-  .footer-container {
-    flex-direction: column; /* Empilha os elementos do rodapé */
-    align-items: center;
+body.dark-mode .nav-bar {
+  background-color: #333333;
+}
+
+body.dark-mode .nav-bar button {
+  background-color: #444444;
+  color: #ffffff;
+}
+
+body.dark-mode .footer {
+  background-color: #222222;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .nav-bar {
-    flex-direction: column; /* Alinha itens na vertical em telas menores */
-  }
-
-  .menu {
-    flex-direction: column; /* Alinha os itens do menu na vertical */
-    gap: 10px; /* Reduz o espaçamento entre os botões do menu */
-  }
-
-  .carousel img {
-    width: 100%; /* Ajusta a largura das imagens do carrossel */
-  }
-
-  .produto {
-    margin: 10px; /* Ajusta a margem dos produtos */
-  }
+.container-modern {
+  animation: fadeIn 0.5s ease-in;
 }
-
-@media (max-width: 480px) {
-  .menu-item button {
-    font-size: 14px; /* Reduz o tamanho da fonte dos botões em telas pequenas */
-    padding: 8px; /* Reduz o preenchimento dos botões em telas pequenas */
-  }
-
-  .produto h2 {
-    font-size: 18px; /* Ajusta o tamanho do título dos produtos em telas pequenas */
-  }
-}
-
-/* Ajustes adicionais para manter responsividade */
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.container-item {
-  flex: 1 1 300px; /* Largura base para os itens */
-  margin: 10px;
-}
-

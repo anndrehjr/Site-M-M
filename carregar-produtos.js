@@ -3,16 +3,16 @@ let currentPage = 1; // Página atual
 const itemsPerPage = 12; // Limite de produtos por página
 
 // Carrega os produtos dinamicamente
-fetch('produtos.json')
+fetch('produto.json')
     .then(response => response.json())
     .then(data => {
         produtos = data; // Armazena os produtos carregados
-        displayProducts(currentPage); // Exibe produtos da primeira página
+        displayProducts(currentPage, produtos); // Exibe produtos da primeira página
     })
     .catch(error => console.error('Erro ao carregar produtos:', error));
 
 // Função para exibir produtos da página atual
-function displayProducts(page) {
+function displayProducts(page, produtosParaExibir) {
     const container = document.getElementById('produtos-container');
     container.innerHTML = ''; // Limpa o contêiner
 
@@ -20,7 +20,7 @@ function displayProducts(page) {
     const end = start + itemsPerPage; // Calcula o índice final
 
     // Exibe produtos da página atual
-    produtos.slice(start, end).forEach(produto => {
+    produtosParaExibir.slice(start, end).forEach(produto => {
         const produtoDiv = document.createElement('div');
         produtoDiv.className = 'container-modern';
         produtoDiv.innerHTML = `
@@ -50,7 +50,63 @@ function displayProducts(page) {
 
     // Atualiza o número da página
     document.getElementById('page-number').innerText = `Página ${page}`;
+
+    // Atualiza os botões de navegação
+    updateNavigationButtons(produtosParaExibir.length);
 }
+
+// Função para atualizar os botões de navegação
+function updateNavigationButtons(totalProducts) {
+    const totalPages = Math.ceil(totalProducts / itemsPerPage); // Calcula o total de páginas
+
+    // Habilita ou desabilita botões conforme o número total de produtos
+    const prevButton = document.getElementById('prev-page');
+    const nextButton = document.getElementById('next-page');
+    if (totalProducts > itemsPerPage) {
+        prevButton.disabled = false;
+        nextButton.disabled = false;
+    } else {
+        prevButton.disabled = true;
+        nextButton.disabled = true;
+    }
+
+    // Exibe ou oculta a navegação
+    const pagination = document.getElementById('pagination');
+    pagination.style.display = totalPages > 1 ? 'block' : 'none';
+}
+
+// Função para filtrar os produtos
+function filtrarProdutos() {
+    const categoria = document.getElementById('categoria').value;
+    const faixaPreco = document.getElementById('preco').value;
+
+    const produtosFiltrados = produtos.filter(produto => {
+        const precoNum = parseFloat(produto.preco.replace('R$ ', '').replace(',', '.'));
+
+        const precoCondicional = faixaPreco === 'todos' || 
+            (faixaPreco === '0-50' && precoNum <= 50) ||
+            (faixaPreco === '50-100' && precoNum > 50 && precoNum <= 100) ||
+            (faixaPreco === '100-200' && precoNum > 100 && precoNum <= 200) ||
+            (faixaPreco === '200+' && precoNum > 200);
+
+        // Filtra pelos tipos de produto
+        return (categoria === 'todas' || produto.tipo === categoria) && precoCondicional;
+    });
+
+    displayProducts(1, produtosFiltrados); // Exibe os produtos filtrados
+}
+
+// Função para desfazer o filtro
+function desfazerFiltro() {
+    document.getElementById('categoria').value = 'todas'; // Reseta a categoria
+    document.getElementById('preco').value = 'todos'; // Reseta a faixa de preço
+
+    displayProducts(1, produtos); // Exibe todos os produtos
+}
+
+// Adiciona eventos aos botões
+document.getElementById('filtrar').addEventListener('click', filtrarProdutos);
+document.getElementById('desfazer-filtro').addEventListener('click', desfazerFiltro);
 
 // Função para mudar de página
 function changePage(direction) {
@@ -63,19 +119,13 @@ function changePage(direction) {
     } else if (currentPage > totalPages) {
         currentPage = totalPages;
     }
-    displayProducts(currentPage); // Exibe os produtos da nova página
+    displayProducts(currentPage, produtos); // Exibe os produtos da nova página
 
     // Rola a página para o topo com um efeito suave
     window.scrollTo({
         top: 0,
         behavior: 'smooth' // Efeito suave
     });
-
-    showLoader(); // Mostra a barra de carregamento
-    setTimeout(() => {
-        displayProducts(currentPage); // Exibe os produtos da nova página
-        hideLoader(); // Oculta a barra de carregamento
-    }, 1000); // Tempo para simular o carregamento
 }
 
 // Função para mostrar o carregador
@@ -97,81 +147,5 @@ function hideLoader() {
 }
 
 function toggleZoom(image) {
-    // Alterna a classe de zoom da imagem clicada
     image.classList.toggle('zoomed');
 }
-
-// JavaScript para controlar o preloader
-let elem_preloader = document.getElementById("preloader");
-setTimeout(function() {
-    elem_preloader.style.display = "none";
-}, 1280); // Tempo em milissegundos
-
-// Configura o slider (Certifique-se de que jQuery e Slick estejam incluídos)
-$(document).ready(function() {
-    $('.carousel').slick({
-        centerMode: true,
-        centerPadding: '60px',
-        slidesToShow: 3,
-        autoplay: true,         // Habilita autoplay
-        autoplaySpeed: 5000,    // Muda a imagem a cada 5 segundos
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 3
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1
-                }
-            }
-        ]
-    });
-});
-
-// Função para alternar o modo e salvar no localStorage
-function toggleDarkMode() {
-    const body = document.body;
-    const toggleBtn = document.getElementById('toggleModeBtn');
-
-    // Alternar a classe 'dark-mode'
-    body.classList.toggle('dark-mode');
-
-    // Verificar se o modo escuro está ativado e salvar no localStorage
-    if (body.classList.contains('dark-mode')) {
-        localStorage.setItem('darkMode', 'enabled');
-        toggleBtn.innerHTML = '🌙'; // Alterar ícone para lua
-    } else {
-        localStorage.setItem('darkMode', 'disabled');
-        toggleBtn.innerHTML = '🌞'; // Alterar ícone para sol
-    }
-}
-
-// Verificar se o modo escuro foi ativado anteriormente e ajustar o botão
-function checkDarkMode() {
-    const darkMode = localStorage.getItem('darkMode');
-    const toggleBtn = document.getElementById('toggleModeBtn');
-
-    if (darkMode === 'enabled') {
-        document.body.classList.add('dark-mode');
-        toggleBtn.innerHTML = '🌙'; // Se modo escuro ativado, exibe lua
-    } else {
-        toggleBtn.innerHTML = '🌞'; // Se modo claro, exibe sol
-    }
-}
-
-// Executar verificação ao carregar a página
-checkDarkMode();
-
-// Adicionar evento ao botão para alternar o modo
-document.getElementById('toggleModeBtn').addEventListener('click', toggleDarkMode);
-
