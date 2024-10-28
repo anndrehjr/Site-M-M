@@ -78,7 +78,7 @@ Contribuições são sempre bem-vindas! Para contribuir, siga estas etapas:
 
 ## Contato 📧
 
-Se você tiver alguma dúvida ou sugestão, não hesite em entrar em contato pelo e-mail: contato@mugsandmore.com. Estamos aqui para ajudar! 💌
+Se você tiver alguma dúvida ou sugestão, não hesite em entrar em contato pelo e-mail: anndreh01@gmail.com. Estamos aqui para ajudar! 💌
 
 ---
 
