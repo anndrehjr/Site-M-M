@@ -147,5 +147,27 @@ function hideLoader() {
 }
 
 function toggleZoom(image) {
-    image.classList.toggle('zoomed');
+    // Verifica se a imagem clicada já tem a classe 'zoomed'
+    const isZoomed = image.classList.contains('zoomed');
+
+    // Remove a classe 'zoomed' de todas as imagens
+    const productImages = document.querySelectorAll('.product-img');
+    productImages.forEach((img) => {
+        img.classList.remove('zoomed');
+    });
+
+    // Se a imagem não estava aumentada, adiciona a classe 'zoomed' apenas à imagem clicada
+    if (!isZoomed) {
+        image.classList.add('zoomed');
+    }
 }
+
+// Seleciona todas as imagens com a classe product-img
+const productImages = document.querySelectorAll('.product-img');
+
+// Adiciona um evento de clique a cada imagem
+productImages.forEach((img) => {
+    img.addEventListener('click', () => {
+        toggleZoom(img); // Chama a função de toggle passando a imagem clicada
+    });
+});

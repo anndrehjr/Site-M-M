@@ -3,7 +3,7 @@
         "nome": "Caneca Personalizada",
         "imagemPequena": "image.png",
         "descricao": "Caneca com design exclusivo e personalizado.",
-        "preco": "R$ 49,99",
+        "preco": "R$ 39,99",
         "tipo": "Personalizados"
     },
     {
@@ -28,7 +28,7 @@
         "tipo": "Acessórios"
     },
     {
-        "nome": "Caneca Personalizada",
+        "nome": "Kit-Xicaras",
         "imagemPequena": "image.png",
         "descricao": "Caneca com design exclusivo e personalizado.",
         "preco": "R$ 49,99",
